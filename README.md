@@ -14,30 +14,37 @@ LITA_CAPSTONE_PROJECT 2: Exploring the data to bring out useful insights
 
 [Data Cleaning and Preparation](#data-cleaning-and-preparation)
 
-[Exploratory Data Analysis and Data Visualization](#exploratory-data-analysis-and-data-visualization)
+[Exploratory Data Analysis ](#exploratory-data-analysis)
+
+[Data Visualization](#data-visualization)
 
 
 
 ### ***Project Overview***
-In this project, we explored the HR Attrition data through various data analysis stages as listed in the outline above to uncover meaningful insights to guide in making reasonable decisions. The data is loaded into the Power BI application and transformed to performed  data cleaning, carry out DAX Functions, and then generate interractive visuals, such as Attrition Rate, Attrition by Region, Attrition by Employee, etc.
+In this project, we explored the Subscription Customer data through various data analysis stages as listed in the outline above to uncover meaningful insights such as, subscription by Region, Revenue by Region, Revenue by Subscription Type, Subscription Type by Active Subscriber, Subscription Type by Inactive Subscriber, Monthly sales trends, and so on. 
 
 ---
 ### ***Data Sources***
 ---
-The major data source used for this project is HR Data.xlsx downloaded from the Incubator Hub LMS account for hands-on practical works data analysis class.
+The major data source used for this project is CustomerData.xlsx downloaded from the Incubator Hub LMS account as capstone project.
 
-[HR Data.xlsx](https://github.com/user-attachments/files/17659399/HR.Data.xlsx)
+[LITA Capstone Dataset.xlsx](https://github.com/user-attachments/files/17678397/LITA.Capstone.Dataset.xlsx)
+
 
 ---
 
 ### ***Tools Used***
-
+- Microsoft Excel [Download Here](https://www.microsoft.com)
+  1. For data Cleanling
+  2. For Analysis
+  3. For visualization
+- SQL: for quering of data
 - Microsoft Power BI [Download Here](https://www.microsoft.com/en-us/power-platform/products/power-bi)
-  1. Data Cleaning and formating
-  2. For Interractive Visualization.
+  - For Interractive Visualization.
 ---
 
 ### ***Data Cleaning and Preparation***
+
 ---
 
 1. Data loading and inspection
@@ -46,6 +53,84 @@ The major data source used for this project is HR Data.xlsx downloaded from the 
 ---
 
 
-### ***Exploratory Data Analysis and Data Visualization***
----
-1. ### Analysis based on the Entire  HR data
+### ***Exploratory Data Analysis***
+There are 6 categories of Products in the data. Below are the Excel Formulas to find:
+1. **Average Sales per Product For:**
+- **Gloves**
+  
+   ```
+    =AVERAGEIF($C$2:$C$9922,C9902,$H$2:H9922)
+
+   ```
+- **Hat**
+  
+  ```
+  =AVERAGEIF($C$2:$C$9922,C4,$H$2:H9922)
+  
+  ```
+
+- **Jacket**
+
+ ``` 
+ =AVERAGEIF($C$2:$C$9922,C6,$H$2:H9922)
+
+ ```
+
+- **Shirt**
+
+ ``` 
+ =AVERAGEIF($C$2:$C$9922,C8,$H$2:H9922)
+
+ ```
+
+- **Shoe**
+
+ ``` 
+ =AVERAGEIF($C$2:$C$9922,C3,$H$2:H9922)
+
+ ```
+
+- **Socks**
+
+ ```
+ =AVERAGEIF($C$2:$C$9922,C5,$H$2:H9922)
+
+```
+
+ 
+
+The results from the formulas above is given below:
+
+**AVERAGE SALE PER PRODUCT**
+
+
+
+ ![image](https://github.com/user-attachments/assets/29707c2f-bbca-4a83-a48b-f4e5ac29b8f5) 
+
+ 2. **Total Revenue by Region**
+	There are 4 Regions in the data, below is the formula to find the total revenue for each region:
+- **East**
+
+  ```
+  =SUMIF($D$2:$D$9922,D9903,$H$2:$H$9922)
+  ```
+- **North**
+  ```
+  =SUMIF($D$2:$D$9922,D2,$H$2:$H$9922)
+  ```
+- **South**
+  ```
+   =SUMIF($D$2:$D$9922,D7,$H$2:$H$9922)
+  
+  ```
+- **West**
+
+  ```
+   =SUMIF($D$2:$D$9922,D9,$H$2:$H$9922)
+
+  ```
+The results from the formula is given below:
+
+***Total Revenue By Region**
+
+![image](https://github.com/user-attachments/assets/5b1936c5-ffb9-4492-b05b-c104dc398b71)
