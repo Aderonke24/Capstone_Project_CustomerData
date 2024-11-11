@@ -54,83 +54,64 @@ The major data source used for this project is CustomerData.xlsx downloaded from
 
 
 ### ***Exploratory Data Analysis***
-There are 6 categories of Products in the data. Below are the Excel Formulas to find:
-1. **Average Sales per Product For:**
-- **Gloves**
+There are 3 categories of subscription type in the data. Below are the Excel Formulas to find:
+1. ** Subscriber per Subscription Type  For:**
+- **Basic**
   
    ```
-    =AVERAGEIF($C$2:$C$9922,C9902,$H$2:H9922)
+   =COUNTIF(D2:D75001,D74982)
 
    ```
-- **Hat**
+- **Standard**
   
   ```
-  =AVERAGEIF($C$2:$C$9922,C4,$H$2:H9922)
+  =COUNTIF(D2:D75001,D5)
   
   ```
 
-- **Jacket**
+- **Premium**
 
  ``` 
- =AVERAGEIF($C$2:$C$9922,C6,$H$2:H9922)
+   =COUNTIF(D2:D75001,D3)
 
  ```
 
-- **Shirt**
 
- ``` 
- =AVERAGEIF($C$2:$C$9922,C8,$H$2:H9922)
+---
+ **Results of the formula is given below**
 
- ```
 
-- **Shoe**
-
- ``` 
- =AVERAGEIF($C$2:$C$9922,C3,$H$2:H9922)
-
- ```
-
-- **Socks**
-
- ```
- =AVERAGEIF($C$2:$C$9922,C5,$H$2:H9922)
-
-```
-
- 
-
-The results from the formulas above is given below:
-
-**AVERAGE SALE PER PRODUCT**
+ 		
+		
+![image](https://github.com/user-attachments/assets/71a002aa-35e2-47f2-a52f-4e7abed362a2)
 
 
 
- ![image](https://github.com/user-attachments/assets/29707c2f-bbca-4a83-a48b-f4e5ac29b8f5) 
 
- 2. **Total Revenue by Region**
-	There are 4 Regions in the data, below is the formula to find the total revenue for each region:
-- **East**
+---
+
+Formula to find Active and Inactive Subscribers is given below:
+
+  **Active Suscriber**
+  ```
+    =COUNTIF(G2:G75001,G8)
 
   ```
-  =SUMIF($D$2:$D$9922,D9903,$H$2:$H$9922)
+
+  **Inactive Subscriber**
+
   ```
-- **North**
-  ```
-  =SUMIF($D$2:$D$9922,D2,$H$2:$H$9922)
-  ```
-- **South**
-  ```
-   =SUMIF($D$2:$D$9922,D7,$H$2:$H$9922)
+   =COUNTIF(G2:G75001,G74981)
   
   ```
-- **West**
+
+**Average Subscription Duration**
+
 
   ```
-   =SUMIF($D$2:$D$9922,D9,$H$2:$H$9922)
+     =AVERAGE(I2:I75001)
 
   ```
-The results from the formula is given below:
+The results from the formula is given as:  **365**
 
-***Total Revenue By Region**
 
-![image](https://github.com/user-attachments/assets/5b1936c5-ffb9-4492-b05b-c104dc398b71)
